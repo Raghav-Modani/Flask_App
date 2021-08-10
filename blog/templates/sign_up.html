@@ -1,0 +1,35 @@
+{% extends "layout.html" %} {% block title %}Sign-In{% endblock %} {%block body%}
+
+<body class="text-center">
+
+    <main class="form-signin" style=" width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;">
+        <form action="/signup" method="POST">
+            <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+
+            <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" placeholder="name" name="name">
+                <label for="floatingInput">Name</label>
+            </div>
+
+            <div class="form-floating">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+                <label for="floatingPassword">Password</label>
+            </div>
+            <br>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Create Account</button>
+
+        </form>
+    </main>
+
+
+
+</body>
+
+{%endblock%}

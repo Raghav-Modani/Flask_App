@@ -1,0 +1,29 @@
+{% extends "layout.html" %} {% block title %}Edit-Post{% endblock %} {%block body%}
+<div class="container">
+
+    <main class="form-signin" style=" width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin: auto;">
+        <form action="/editpost/{{post.id}}" method="POST" class="d-flex flex-column justify-content-center">
+            <div class="form-floating">
+
+                <input type="text" class="form-control" id="floatingInput" placeholder="name" name="title" value="{{post.title}}">
+                <label for="floatingInput">Title</label>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Content</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content">{{post.text}}</textarea>
+            </div>
+            <br>
+            <button class=" btn btn-danger ms-auto" type="submit">Save Changes</button>
+
+
+        </form>
+
+    </main>
+</div>
+
+
+{%endblock%}
